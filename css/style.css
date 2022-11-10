@@ -1,0 +1,109 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+}
+
+.col {
+  border: 1px solid rgba(0, 0, 0, 0.247);
+  flex: 1;
+  background: #FBEDA9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.col h2 {
+  padding: 10px;
+  color: rgb(29, 29, 29);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+.col h2:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+}
+.col button {
+  outline: none;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s;
+}
+.col button:hover {
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  max-width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
+
+.modal__cross {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: #444;
+  cursor: pointer;
+}
+
+.block {
+  text-align: center;
+}
+.block h4 {
+  padding-top: 15px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.block h4.visible {
+  opacity: 1;
+}
+
+a {
+  padding: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #414b52;
+  margin: 10px;
+  color: #fff;
+  border-radius: 3px;
+}
