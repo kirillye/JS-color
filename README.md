@@ -1,1 +1,2 @@
-# JS-color
+color.github.io
+
