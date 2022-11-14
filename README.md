@@ -1,2 +1,2 @@
-color.github.io
+colorJs
 
